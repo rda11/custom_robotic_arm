@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+
+    <param name="robot_description" textfile="$(find arm)/urdf/arm.urdf"/>
+
+    <node name="rviz" pkg="rviz" type="rviz" output="screen"/> 
+
+    <node name="rob_state_pub" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>
+
+    <node name="joi_state_pub" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" output="screen"/>
+    
+    
+
+</launch>

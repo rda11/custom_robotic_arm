@@ -1,0 +1,17 @@
+arm_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - link1_joint
+    - link2_joint
+    - link3_joint
+    - link4_joint
+  constraints:
+          goal_time: 0.6
+          stopped_velocity_tolerance: 0.05
+          link1_joint: {trajectory: 0.1, goal: 0.1}
+          link2_joint: {trajectory: 0.1, goal: 0.1}
+          link3_joint: {trajectory: 0.1, goal: 0.1}
+          link4_joint: {trajectory: 0.1, goal: 0.1}
+  stop_trajectory_duration: 0.5
+  state_publish_rate:  25
+  action_monitor_rate: 10
